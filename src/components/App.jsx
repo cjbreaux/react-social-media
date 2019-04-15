@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./Header";
 import Profile from "./Profile";
 import ProfileDescription from "./ProfileDescription";
+import FriendsList from "./FriendsList";
 
 function App() {
   const appContainer = {
@@ -15,6 +16,7 @@ function App() {
       <Header/>
       <Profile/>
       <ProfileDescription/>
+      <FriendsList/>
     </div>
   );
 }
