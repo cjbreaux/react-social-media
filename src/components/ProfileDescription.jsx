@@ -2,6 +2,7 @@ import React from 'react';
 
 function ProfileDescription() {
   const divStyle = {
+    gridArea: "3 / 1",
     marginTop: '30px',
     width: '225px',
     height: '30vh',

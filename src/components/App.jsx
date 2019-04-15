@@ -6,11 +6,12 @@ import ProfileDescription from "./ProfileDescription";
 function App() {
   const appContainer = {
     display: 'grid',
-    gridTemplateColumns: ''
+    gridTemplateColumns: '25vw 50vw 25vw',
+    gridTemplateRow: 'repeat(8, 1fr)'
   }
+
   return (
     <div style={appContainer}>
-      <h1> TWEETER </h1>
       <Header/>
       <Profile/>
       <ProfileDescription/>

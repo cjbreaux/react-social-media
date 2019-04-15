@@ -7,11 +7,16 @@ function Header() {
     display: 'flex',
     justifyContent: 'space-between'
   }
+  const gridStyle = {
+    gridColumnStart: 'span 3'
+  }
   return (
-    <div style={navFlex}>
-      <Links/>
-      <Search/>
-    </div>
+    <div style={gridStyle}>
+      <div style={navFlex}>
+        <Links/>
+        <Search/>
+      </div>
+  </div>
   );
 }
 
