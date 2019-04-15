@@ -5,6 +5,9 @@ import { AppContainer } from 'react-hot-loader';
 
 
 const render = (Component) => {
+  const container = {
+    backgroundColor: 'red'
+  }
   ReactDOM.render(
     <AppContainer>
       <Component/>
