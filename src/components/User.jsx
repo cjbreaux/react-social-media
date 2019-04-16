@@ -34,6 +34,12 @@ function User(props) {
         <h1>{props.number}</h1>
         <button>Button</button>
       </div>
+  }
+  return (
+    <div>
+      <img style={imageStyle} src={user}></img>
+      <h1>{props.name}</h1>
+      <button>Button</button>
     </div>
   );
 }
