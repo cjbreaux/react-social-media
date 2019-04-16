@@ -3,6 +3,7 @@ import Header from "./Header";
 import Profile from "./Profile";
 import ProfileDescription from "./ProfileDescription";
 import FriendsList from "./FriendsList";
+import Feed from "./Feed";
 
 function App() {
   const appContainer = {
@@ -17,6 +18,7 @@ function App() {
       <Profile/>
       <ProfileDescription/>
       <FriendsList/>
+      <Feed/>
     </div>
   );
 }

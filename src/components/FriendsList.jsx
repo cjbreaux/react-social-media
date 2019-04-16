@@ -1,6 +1,25 @@
 import React from 'react';
 import User from './User';
 
+const listOfFriends = [
+  {
+    name: 'john',
+    number: '5'
+  },
+  {
+    name: 'chris',
+    number: '9'
+  },
+  {
+    name: 'maly',
+    number: '2'
+  },
+  {
+    name: 'leo',
+    number: '10'
+  }
+];
+
 function FriendsList() {
   const gridStyle = {
     border: '1px solid blue',
@@ -8,10 +27,11 @@ function FriendsList() {
   }
   return(
     <div style={gridStyle}>
-      <User
-        name="Maly"/>
-      <User
-        name="Chris"/>
+      {listOfFriends.map((friend, index) =>
+        <User name = {friend.name}
+          number = {friend.number}
+          key = {index}/>
+      )}
     </div>
   );
 }
