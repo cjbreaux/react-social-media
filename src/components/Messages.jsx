@@ -2,22 +2,23 @@ import React from 'react';
 import user from '../assets/images/user.jpeg';
 import PropTypes from 'prop-types';
 
-function User(props) {
+function Messages(props) {
   const imageStyle = {
     height: '3vh'
   }
-  return (
+  return(
     <div>
       <img style={imageStyle} src={user}></img>
-      <h1>{props.name}</h1>
-      <h1>{props.number}</h1>
-      <button>Button</button>
+      <h3>{props.title}</h3>
+      <h3>{props.text}</h3>
     </div>
   );
 }
 
-User.propTypes = {
-  name: PropTypes.string
+
+Messages.propTypes = {
+  title: PropTypes.string,
+  text: PropTypes.string
 };
 
-export default User;
+export default Messages;
