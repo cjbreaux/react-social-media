@@ -7,9 +7,12 @@ function Messages(props) {
     height: '3vh'
   }
   const viewWidth = {
-    width: '80%',
     textAlign: 'center',
-    margin: 'auto'
+    margin: 'auto',
+    border: '2px solid black',
+    padding: '2%',
+    margin: '2%'
+
   }
   return(
     <div style={viewWidth}>
@@ -26,6 +29,7 @@ function Messages(props) {
       <img style={imageStyle} src={user}></img>
       <h3 className="title">{props.title}</h3>
       <h3 className="text">{props.text}</h3>
+      <button>Like</button> {props.likes}
     </div>
   );
 }

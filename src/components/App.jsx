@@ -8,8 +8,9 @@ import Feed from "./Feed";
 function App() {
   const appContainer = {
     display: 'grid',
-    gridTemplateColumns: '25vw 50vw 25vw',
-    gridTemplateRow: 'repeat(8, 1fr)'
+    gridTemplateColumns: '24vw 48vw 24vw',
+    // gridTemplateRow: 'repeat(8, 1fr)',
+    gridGap: '1%'
   }
 
   return (
