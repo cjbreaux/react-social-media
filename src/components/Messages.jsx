@@ -29,7 +29,8 @@ function Messages(props) {
       <img style={imageStyle} src={user}></img>
       <h3 className="title">{props.title}</h3>
       <h3 className="text">{props.text}</h3>
-      <button>Like</button> {props.likes}
+      <p> The index position of this thing is  {props.index}</p>
+      <button onClick={()=>props.onNewLike(props.index)}>Like</button> {props.likes}
     </div>
   );
 }

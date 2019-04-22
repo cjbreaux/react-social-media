@@ -12,7 +12,7 @@ function Links() {
     <div>
       <a style={navStyle} href="#">Home</a>
       <a style={navStyle} href="#">Notifications</a>
-      <a style={navStyle} href="#">Messages</a>
+      <a style={navStyle} href="#">Message</a>
     </div>
   );
 }

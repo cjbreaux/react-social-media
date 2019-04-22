@@ -3,7 +3,8 @@ import Header from "./Header";
 import Profile from "./Profile";
 import ProfileDescription from "./ProfileDescription";
 import FriendsList from "./FriendsList";
-import Feed from "./Feed";
+import FeedContainer from "./FeedContainer";
+import NewMessageForm from "./NewMessageForm";
 
 function App() {
   const appContainer = {
@@ -19,7 +20,7 @@ function App() {
       <Profile/>
       <ProfileDescription/>
       <FriendsList/>
-      <Feed/>
+      <FeedContainer/>
     </div>
   );
 }
