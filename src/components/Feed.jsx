@@ -37,11 +37,9 @@ class Feed extends React.Component {
   }
 
   render(){
-    const gridStyle = {
-      gridArea: "2 / 2 / span 3"
-    }
+
     return(
-      <div style={gridStyle}>
+      <div>
         {this.state.listOfMessages.map((post, index) =>
           <Messages title={post.title}
             text={post.text}

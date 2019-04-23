@@ -16,6 +16,9 @@ class FeedContainer extends React.Component {
   }
 
   render() {
+    const gridStyle = {
+      gridArea: "2 / 2 / 6 / 3"
+    }
     let viewToRender = null;
     if (this.state.formVisble === true) {
       viewToRender = <NewMessageForm />
@@ -24,7 +27,7 @@ class FeedContainer extends React.Component {
     }
 
     return(
-      <div>
+      <div className='gridStyle'>
         <button onClick={this.handleNewPost}>Post a New Message</button>
         {viewToRender}
       </div>

@@ -4,7 +4,7 @@ import user from '../assets/images/user.jpeg';
 
 function Profile() {
   const profileDiv = {
-    gridArea: "2 / 1",
+    gridArea: "2 / 1 / 3 / 2",
     position: 'relative',
     border: '2px solid #cccccc'
   }
