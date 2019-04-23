@@ -14,11 +14,19 @@ class FeedContainer extends React.Component {
     this.setState({formVisble: !this.state.formVisble});
     console.log(this.state.formVisble);
   }
+
   render() {
+    let viewToRender = null;
+    if (this.state.formVisble === true) {
+      viewToRender = <NewMessageForm />
+    } else {
+      viewToRender = <Feed />
+    }
+
     return(
       <div>
         <button onClick={this.handleNewPost}>Post a New Message</button>
-        <Feed />
+        {viewToRender}
       </div>
     );
   }
