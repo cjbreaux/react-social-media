@@ -32,18 +32,15 @@ class FeedContainer extends React.Component {
   }
   swapView() {
     this.setState({formVisble: !this.state.formVisble});
-    console.log(this.state.formVisble);
   }
 
   handleNewPost(newPost) {
-    alert('calling the method')
     const newListOfMessages = this.state.listOfMessages.slice();
     newListOfMessages.push(newPost);
     this.setState({listOfMessages: newListOfMessages});
   }
 
   handleNewLike(index) {
-    //need to pass this to Messages, setState needs an object
     this.setState({likes: this.state.listOfMessages[index].likes +=1})
   }
 
