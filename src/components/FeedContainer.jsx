@@ -27,11 +27,26 @@ class FeedContainer extends React.Component {
       ]
     };
     this.swapView = this.swapView.bind(this);
+    this.handleNewPost = this.handleNewPost.bind(this);
+    this.handleNewLike = this.handleNewLike.bind(this);
   }
   swapView() {
     this.setState({formVisble: !this.state.formVisble});
     console.log(this.state.formVisble);
   }
+
+  handleNewPost(newPost) {
+    alert('calling the method')
+    const newListOfMessages = this.state.listOfMessages.slice();
+    newListOfMessages.push(newPost);
+    this.setState({listOfMessages: newListOfMessages});
+  }
+
+  handleNewLike(index) {
+    //need to pass this to Messages, setState needs an object
+    this.setState({likes: this.state.listOfMessages[index].likes +=1})
+  }
+
 
   render() {
     const gridStyle = {
@@ -39,9 +54,9 @@ class FeedContainer extends React.Component {
     }
     let viewToRender = null;
     if (this.state.formVisble === true) {
-      viewToRender = <NewMessageForm  />
+      viewToRender = <NewMessageForm onNewPost={this.handleNewPost} onSwapView={this.swapView} />
     } else {
-      viewToRender = <Feed listOfMessages={this.state.listOfMessages} />
+      viewToRender = <Feed listOfMessages={this.state.listOfMessages} onNewLike={this.handleNewLike} />
     }
 
     return(
