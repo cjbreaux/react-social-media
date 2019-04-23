@@ -6,11 +6,29 @@ class FeedContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      formVisible: false
+      formVisible: false,
+      listOfMessages: [
+        {
+          title: 'Whats up?',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
+          likes: 22
+        },
+        {
+          title: 'Burger time',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
+          likes: 7
+        },
+        {
+          title: 'Call me ASAP',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+          likes: 14
+
+        }
+      ]
     };
-    this.handleNewPost = this.handleNewPost.bind(this);
+    this.swapView = this.swapView.bind(this);
   }
-  handleNewPost() {
+  swapView() {
     this.setState({formVisble: !this.state.formVisble});
     console.log(this.state.formVisble);
   }
@@ -21,14 +39,14 @@ class FeedContainer extends React.Component {
     }
     let viewToRender = null;
     if (this.state.formVisble === true) {
-      viewToRender = <NewMessageForm />
+      viewToRender = <NewMessageForm  />
     } else {
-      viewToRender = <Feed />
+      viewToRender = <Feed listOfMessages={this.state.listOfMessages} />
     }
 
     return(
       <div className='gridStyle'>
-        <button onClick={this.handleNewPost}>Post a New Message</button>
+        <button onClick={this.swapView}>Post a New Message</button>
         {viewToRender}
       </div>
     );
